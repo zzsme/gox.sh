@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 #为了兼容windows下的bash
-cd $GOPATH;
+cd $GOPATH
 #创建 $GOPATH/src/golang.org/x 目录
 mkdir -p $GOPATH/src/golang.org/x
 
 echo "已经安装的golang.org/x package"
-ls;
+ls
 echo "下面一行 packages 中包的名字您可以自己来定义"
 packages=(
 "glog" "image" "perf" "snappy" "term" "sync" "winstrap" "cwg"
@@ -20,7 +20,7 @@ do
    cd $GOPATH/src/golang.org/x
    if [[ -d "${name}" ]]
    then
-        cd ${name};
+        cd ${name}
         echo ${name} "包已经存在,使用git pull来更新源码"
         git pull
    else
